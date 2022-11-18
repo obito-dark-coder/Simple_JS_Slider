@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(10deg, rgb(14, 10, 14), rgb(8, 61, 45), rgb(112, 96, 67));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+.slide {
+    height: 70vh;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 800ms ease-in-out;
+    filter: saturate(50%) blur(1px);
+}
+
+.slide h3 {
+    position: absolute;
+    font-size: 8vh;
+    top: 20px;
+    left: 40px;
+    margin: 0px;
+    opacity: 0;
+}
+
+.slide.active {
+    filter: saturate(120%);
+    flex: 9;
+}
+
+.slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.4s;
+}
+
+
+
